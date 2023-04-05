@@ -128,7 +128,7 @@ public class RequestSender {
                     .addParameter(parameterToSearch, parametersValue)
                     .build();
             httpGet.setURI(uri);
-            String path = System.getProperty("user.dir") + "C:\\Users\\dp270\\IdeaProjects\\HW13\\src\\main\\java\\org\\web\\files";
+            String path = "C:\\Users\\dp270\\IdeaProjects\\HW13\\src\\main\\java\\org\\web\\files";
             File file = new File(String.format(path + "users_%s_posts.json", parametersValue));
             CloseableHttpResponse response = httpClient.execute(httpGet);
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
@@ -153,7 +153,7 @@ public class RequestSender {
                     .addParameter(parameterToSearch, parametersValue)
                     .build();
             httpGet.setURI(uri);
-            String path = System.getProperty("user.dir") + "C:\\Users\\dp270\\IdeaProjects\\HW13\\src\\main\\java\\org\\web\\files";
+            String path = "C:\\Users\\dp270\\IdeaProjects\\HW13\\src\\main\\java\\org\\web\\files";
             File file = new File(String.format(path + "/users_%s_comment.json", parametersValue));
             CloseableHttpResponse response = httpClient.execute(httpGet);
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
